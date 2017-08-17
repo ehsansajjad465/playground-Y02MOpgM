@@ -1,1 +1,1 @@
-# csharp-template
+# Story of Equality in .NET
