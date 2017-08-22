@@ -232,8 +232,8 @@ Some data types are inherently approximate. In .Net you will encounter this prob
 
 
 
-    float num1 = 2.000000f;
-    float num2 = 2.000001f;
+    float num1 = 2.0000000f;
+    float num2 = 2.0000001f;
     
     Console.WriteLine(num1 == num2);
 
@@ -249,7 +249,7 @@ This program has come out saying that they both are equal which is completely co
     var sum = num1 + num2;
 
     Console.WriteLine(sum);
-    Console.WriteLine(sum == 6.0f);
+    Console.WriteLine(sum == 2.0f);
 
 This is a simple calculation where we are adding **1.05** to **0.95**. It looks very obvious that when you add those two numbers you will get the answer **2.0** , so we have written a small program for this which adds those two numbers and then we check that the sum of two numbers is equal to **2.0** , if we run the program, the output contradicts what we had thought, which says the sum is not equal to **2.0,** the reason is that rounding errors happened in the floating point arithmetic resulting in the answer storing a number that is very close to **2** , so close that string representation on **Console.WriteLine** even displayed it as **2** but it&#39;s still not quite equal to **2**.
 
